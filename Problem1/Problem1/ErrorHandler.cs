@@ -8,7 +8,7 @@ namespace Problem1
 {
     class ErrorHandler
     {
-        public string WrongInput(string letter)
+        public string WrongInput(string letter) // It will automatically check if the letter that you typed is right or wrong
         {
             bool input = true;
             letter = letter.ToUpper();
@@ -41,10 +41,10 @@ namespace Problem1
         }
         
 
-        public int WrongNumber(string stringNumber)
+        public int WrongNumber(string stringNumber) // It will automatically check if the number that you typed is right or wrong
         {
             int number;
-            Int32.TryParse(stringNumber, out number); // Converted it here into Integer, This way the application does not throw an exception even if just press *enter* without typing anything
+            Int32.TryParse(stringNumber, out number); // Converted string into Integer, This way the application does not throw an exception even if just press *enter* without typing anything or if you use characters instead of numbers
             bool inputNum = true;
             while (inputNum)
             {
@@ -83,7 +83,7 @@ namespace Problem1
             return number;
         }
 
-        public bool tryAgain (string yesNo)
+        public bool tryAgain (string yesNo) // It will check it for you if you typed Y, N or different characters
         {
             yesNo = yesNo.ToUpper();
             bool input = true;
@@ -94,11 +94,11 @@ namespace Problem1
                 {
                     case "Y":
                         input = false;
-                        confirmation = true;
+                        confirmation = true; // Confirmation is true therefore it will loop back to the start so you can try again
                         break;
                     case "N":
                         input = false;
-                        confirmation = false;
+                        confirmation = false; // Confirmation is false therefore it will stop after typing N
                         break;
                     default:
                         input = true;

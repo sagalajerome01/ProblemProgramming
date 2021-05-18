@@ -39,7 +39,7 @@ namespace Problem1
             {
                 if (height == 1 || height == oddNum) // The first row and the Last Row
                 {
-                    for (rows = 1; rows <= oddNum; rows++) // First and Last Row ( Added space on first and last column )
+                    for (rows = 1; rows <= oddNum; rows++) // First and Last Row ( Added space on first and last column to create a letter O using asterisks )
                     {
                         if (rows == 1 || rows == oddNum)
                         {
@@ -70,7 +70,7 @@ namespace Problem1
 
         }
 
-        private void FunctionX(int oddNum)
+        private void FunctionX(int oddNum) // If the user typed X as its asterisks pattern
         {
             int copyNum = oddNum;
             int iCounter;
